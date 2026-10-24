@@ -36,6 +36,7 @@ Vite and Vitest replace the legacy Create React App toolchain. Unused packages
 `react-bootstrap`) have been removed to reduce the dependency tree.
 
 CI checks the complete dependency tree with `npm audit --audit-level=low`, runs
-the movie-picker tests, and builds the app. Dependabot checks npm packages and
-GitHub Actions weekly. New advisories can appear after any successful audit;
+the movie-picker tests, and builds the app. Dependabot is configured for security update PRs only;
+routine version update PRs are disabled for npm and GitHub Actions. React and
+React DOM security updates are grouped to keep their versions compatible. New advisories can appear after any successful audit;
 review and merge future updates to keep the repository current.
