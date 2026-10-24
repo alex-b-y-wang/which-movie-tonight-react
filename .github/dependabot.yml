@@ -4,10 +4,16 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    # Disable routine version PRs; security updates remain enabled.
+    open-pull-requests-limit: 0
     groups:
-      development-dependencies:
-        dependency-type: development
+      react-security:
+        applies-to: security-updates
+        patterns:
+          - react
+          - react-dom
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+    open-pull-requests-limit: 0
